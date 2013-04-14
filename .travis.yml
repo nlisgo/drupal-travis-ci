@@ -8,6 +8,8 @@ mysql:
   encoding: utf8
 
 before_script:
+ - curl -s https://getcomposer.org/installer | php
+ - php composer.phar -v -o --no-progress update
  - mysql -e 'create database drupal;'
  - pyrus channel-discover pear.drush.org
  - pyrus install drush/drush
@@ -21,4 +23,4 @@ before_script:
  - sleep 4
  - drush vset --yes simpletest_verbose FALSE
 
-script: drush test-run Syslog --xml --uri=http://127.0.0.1:8080
+script: ./bin/behat
