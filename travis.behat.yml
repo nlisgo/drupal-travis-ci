@@ -1,3 +1,4 @@
+## configuration for Travis-CI.
 default:
   paths:
     features: 'features'
