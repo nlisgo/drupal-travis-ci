@@ -21,8 +21,6 @@ before_script:
  - sleep 4
  - drush vset --yes simpletest_verbose FALSE
  - cd ..
-# travis has composer already. - curl -s https://getcomposer.org/installer | php
- - rm composer.lock
  - composer --no-progress install
 
 script: bin/behat -c travis.behat.yml
