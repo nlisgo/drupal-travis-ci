@@ -1,5 +1,5 @@
 Feature: This site has a home page.
-  In order to give people a place to land on the web site
+  In order to verify success at installing the web site
   As an anonymous user
   I want to go to the home page without errors
   
