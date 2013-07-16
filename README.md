@@ -11,13 +11,13 @@ The purpose of this exercise is to have a uniform, standardized behavioral testi
 
 The system uses Behat for behavioral testing. Currently it only tests that the system has deployed and the site has a front page.
 
-Tools You Need
---------------
+Requirements
+------------
 
 - git
 - Github repo configured to use travis-ci.
 - *AMP stack
-- Drush
+- drush
 
 For local testing:
 
@@ -27,6 +27,8 @@ How?
 ----
 
 NOTE: THESE BUILD INSTRUCTIONS ARE INCOMPLETE.
+
+Mostly because the project is incomplete. :-)
 
 Grab the repo.
 
