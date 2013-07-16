@@ -13,7 +13,7 @@ before_script:
  - pyrus install drush/drush
  - phpenv rehash
  - drush make make/drupal-travis.make drupal
- - cd drupal-*
+ - cd drupal
  - drush si standard --db-url=mysql://root:@localhost/drupal --yes
  - drush en --yes simpletest
  - drush cc all
