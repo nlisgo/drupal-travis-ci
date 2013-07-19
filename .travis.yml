@@ -12,7 +12,7 @@ before_script:
  - pyrus channel-discover pear.drush.org
  - pyrus install drush/drush
  - phpenv rehash
- - drush make drushmake/drupal-travis.make drupal
+ - drush make drushmake/drupalmatic.make drupal
  - cp -r drushmake/drupalmatic drupal/profiles
  - cd drupal
  - drush si drupalmatic --db-url=mysql://root:@localhost/drupal --yes
