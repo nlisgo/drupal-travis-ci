@@ -5,4 +5,4 @@
 core = "7.x"
 api = "2"
 
-projects[] = backup_migrate
+projects[backup_migrate] = 2.7
