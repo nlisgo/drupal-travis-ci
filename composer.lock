@@ -91,9 +91,9 @@
                 "symfony/finder": "~2.0"
             },
             "require-dev": {
-                "symfony/config": "~2.0",
-                "symfony/translation": "~2.0",
-                "symfony/yaml": "~2.0"
+                "symfony/config": ">=2.0,<3.0",
+                "symfony/translation": ">=2.0,<3.0",
+                "symfony/yaml": ">=2.0,<3.0"
             },
             "suggest": {
                 "symfony/config": "If you want to use Config component to manage resources",
@@ -263,7 +263,7 @@
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "behat/mink-goutte-driver": "~1.0"
+                "behat/mink-goutte-driver": ">=1.0,<2.0"
             },
             "type": "behat-extension",
             "extra": {
@@ -412,7 +412,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/project/drupalextension.git",
-                "reference": "8f522258b89a8252bacba70e7cea886fa825b8a1"
+                "reference": "c0a3b09874cf0c9a8f482964fe949f5d0a4feb00"
             },
             "require": {
                 "behat/behat": ">=2.4.3, <2.5.0",
@@ -427,6 +427,7 @@
             "type": "behat-extension",
             "autoload": {
                 "psr-0": {
+                    "Drupal\\Component": "src/",
                     "Drupal\\Driver": "src/",
                     "Drupal\\Drupal": "src/",
                     "Drupal\\Exception": "src/",
@@ -451,7 +452,7 @@
                 "test",
                 "web"
             ],
-            "time": "2013-07-09 18:24:37"
+            "time": "2013-07-17 01:02:02"
         },
         {
             "name": "fabpot/goutte",
@@ -459,12 +460,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Goutte.git",
-                "reference": "2f5104765152d51b501de452a83153ac0b1492df"
+                "reference": "11ce3d1d91c8b35ee98341472281a9c96f296e78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Goutte/zipball/2f5104765152d51b501de452a83153ac0b1492df",
-                "reference": "2f5104765152d51b501de452a83153ac0b1492df",
+                "url": "https://api.github.com/repos/fabpot/Goutte/zipball/11ce3d1d91c8b35ee98341472281a9c96f296e78",
+                "reference": "11ce3d1d91c8b35ee98341472281a9c96f296e78",
                 "shasum": ""
             },
             "require": {
@@ -507,7 +508,7 @@
             "keywords": [
                 "scraper"
             ],
-            "time": "2013-07-02 07:48:02"
+            "time": "2013-07-15 19:47:12"
         },
         {
             "name": "guzzle/common",
@@ -925,12 +926,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/CssSelector.git",
-                "reference": "e3aa2495604a483b58f318ad6de845b88ec410d6"
+                "reference": "v2.3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/CssSelector/zipball/e3aa2495604a483b58f318ad6de845b88ec410d6",
-                "reference": "e3aa2495604a483b58f318ad6de845b88ec410d6",
+                "url": "https://api.github.com/repos/symfony/CssSelector/zipball/v2.3.2",
+                "reference": "v2.3.2",
                 "shasum": ""
             },
             "require": {
@@ -1097,7 +1098,7 @@
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "symfony/dependency-injection": "~2.0"
+                "symfony/dependency-injection": ">=2.0,<3.0"
             },
             "suggest": {
                 "symfony/dependency-injection": "",
@@ -1139,12 +1140,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Filesystem.git",
-                "reference": "7975f9df488adbc9cef2089bac2887f14085481f"
+                "reference": "18460cf04fc28664e37c37a72d4635273fd97b8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/7975f9df488adbc9cef2089bac2887f14085481f",
-                "reference": "7975f9df488adbc9cef2089bac2887f14085481f",
+                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/18460cf04fc28664e37c37a72d4635273fd97b8f",
+                "reference": "18460cf04fc28664e37c37a72d4635273fd97b8f",
                 "shasum": ""
             },
             "require": {
@@ -1177,7 +1178,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "http://symfony.com",
-            "time": "2013-06-11 07:15:38"
+            "time": "2013-06-21 17:11:07"
         },
         {
             "name": "symfony/finder",
@@ -1292,8 +1293,8 @@
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "symfony/config": "~2.0",
-                "symfony/yaml": "~2.2"
+                "symfony/config": ">=2.0,<3.0",
+                "symfony/yaml": ">=2.2,<3.0"
             },
             "suggest": {
                 "symfony/config": "",
