@@ -24,4 +24,7 @@ before_script:
  - cd ..
  - composer --no-progress install
 
-script: bin/behat -c travis.behat.yml
+script:
+  - bin/behat -c travis.behat.yml
+  - cd drupal
+  - drush test-run -1 http://127.0.0.1:8080
