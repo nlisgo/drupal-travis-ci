@@ -33,5 +33,5 @@ script:
   - cd drupal
 # Set up to run the PHP test group under SimpleTest, since it's quick.
 # Change this line to include all the test groups you want to run.
-#  - drush test-run SomeGroup,AnotherGroup --uri=http://localhost:8080/
-  - drush test-run PHP --uri=http://localhost:8080/
+#  drush test-run SomeGroup,AnotherGroup --uri=http://localhost:8080/
+  - sudo -u apache drush test-run PHP --uri=http://localhost:8080/
