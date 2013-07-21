@@ -12,6 +12,8 @@ before_script:
  - pyrus channel-discover pear.drush.org
  - pyrus install drush/drush
  - phpenv rehash
+ - mkdir private
+ - mkdir tmp
  - drush make drushmake/drupalmatic.make drupal
  - cp -r drushmake/drupalmatic drupal/profiles
  - cd drupal
@@ -25,6 +27,11 @@ before_script:
  - composer --no-progress install
 
 script:
+# Start with behavioral tests.
   - bin/behat -c travis.behat.yml
+# Now for Drupal SimpleTest.
   - cd drupal
-  - drush test-run -all http://127.0.0.1:8080
+# Set up to run the PHP test group under SimpleTest, since it's quick.
+# Change this line to include all the test groups you want to run.
+#  - drush test-run SomeGroup,AnotherGroup --uri=http://localhost:8080/
+  - drush test-run PHP --uri=http://localhost:8080/

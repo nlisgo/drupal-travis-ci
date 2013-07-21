@@ -1,4 +1,6 @@
 drupal*/
 bin/
 vendor/
+private/
+tmp/
 composer.phar
