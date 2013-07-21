@@ -26,29 +26,35 @@ For local testing:
 How?
 ----
 
-NOTE: THESE BUILD INSTRUCTIONS ARE INCOMPLETE.
+NOTE: THESE BUILD INSTRUCTIONS ARE INCOMPLETE. Mostly because the project is incomplete. :-)
 
-Mostly because the project is incomplete. :-)
+Set up your github project repo to work with Travis-CI: http://about.travis-ci.org/docs/user/getting-started/
 
-Grab the repo.
+Grab the drupalmatic repo.
 
 	git clone git@github.com:paul-m/drupal-travis-ci.git
 	cd drupal-travis-ci
 
-Change your repo origin.
+Change your repo origin. You don't want to end up pushing your project back to the drupalmatic repo. :-)
 
 	git remote ...
 
-Build a site.
+Build a site from the drupalmatic profile. This will be replaced by a script soon-ish.
 
-	drush make ...
-	drush si ...
+	drush make drushmake/drupalmatic.make drupal
+	cp -r drushmake/drupalmatic drupal/profiles
+	cd drupal
+	drush si drupalmatic --db-url=mysql://root:@localhost/drupal --yes
 
-Dump the database to the database directory. (Backup & Migrate is a dependency.) This will act as a fixture for the site.
+Build your project site on the Drupal site you just made.
+
+Make behavioral tests in Behat/Gherkin, and put those tests in `/features`
+
+Dump the database to the database directory. (Backup & Migrate is a dependency.) This will act as a fixture for the tests.
 
 	drush bam ....
 
-Commit the site's files to the repo, including the database dump.
+Commit the site's files to the repo, including the database dump. Your `.gitignore` can disregard `/drupal` and other directories, since the whole thing will be rebuilt in Travis-CI.
 
 	git add -A :/
 	git commit -m 'this site is ready for behavioral testing'
@@ -61,6 +67,8 @@ Wait for an email from Travis CI, or go watch the build.
 
 Run Tests Locally
 -----------------
+
+Once you have your local setup running (see previous set of instructions), you can test it.
 
 Tests are in Behat, which requires some work with Composer to install.
 
