@@ -39,7 +39,7 @@ Change your repo origin. You don't want to end up pushing your project back to t
 
 	git remote ...
 
-Build a site from the drupalmatic profile. This will be replaced by a script soon-ish.
+Build a site from the drupalmatic profile. This will be replaced by a script soon-ish. Be sure and substitute your database credentials and db name in the `drush si` command.
 
 	drush make drushmake/drupalmatic.make drupal
 	cp -r drushmake/drupalmatic drupal/profiles
@@ -49,6 +49,8 @@ Build a site from the drupalmatic profile. This will be replaced by a script soo
 Build your project site on the Drupal site you just made.
 
 Make behavioral tests in Behat/Gherkin, and put those tests in `/features`
+
+(Note that the rest of these instructions aren't implemented.)
 
 Dump the database to the database directory. (Backup & Migrate is a dependency.) This will act as a fixture for the tests.
 

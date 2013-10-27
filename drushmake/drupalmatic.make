@@ -5,8 +5,8 @@
 core = 7.x
 api = 2
 
-; Change the Drupal core version to test it.
-; Finally push it once it's tested.
+; Be specific with the version.
+; Push changes only after testing.
 projects[drupal][version] = 7.22
 
 ; include the d.o. profile base
