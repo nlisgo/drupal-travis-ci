@@ -50,7 +50,7 @@ Build your project site on the Drupal site you just made.
 
 Make behavioral tests in Behat/Gherkin, and put those tests in `/features`
 
-(Note that the rest of these instructions aren't implemented.)
+**(Note that the rest of these instructions aren't implemented.)**
 
 Dump the database to the database directory. (Backup & Migrate is a dependency.) This will act as a fixture for the tests.
 
