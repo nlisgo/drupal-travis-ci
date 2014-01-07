@@ -78,7 +78,7 @@ You can look at the `travis.behat.yml` file for some clues as to how this works.
 
 Go to the project directory
 
-	cd drupal-travis-ci	
+	cd drupal-travis-ci
 
 Install Composer
 
@@ -113,11 +113,11 @@ If all goes well, you should see something like this:
 	  In order to verify success at installing the web site
 	  As an anonymous user
 	  I want to go to the home page without errors
-	
+
 	  Scenario: Go to the home page                 # features/homepage.feature:6
 	    When I go to the homepage                   # FeatureContext::iAmOnHomepage()
 	    Then the response status code should be 200 # FeatureContext::assertResponseStatus()
-	
+
 	1 scenario (1 passed)
 	2 steps (2 passed)
 	0m0.147s
@@ -126,3 +126,5 @@ Credit
 ------
 
 This project was originally a fork of drupal-travis-ci by David Stoline: https://github.com/unn/drupal-travis-ci
+
+Happy New Year!
